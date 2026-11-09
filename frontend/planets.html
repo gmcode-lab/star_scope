@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Details | Star Scope</title>
+    <link rel="stylesheet" href="css/planet.css">
+</head>
+
+<body>
+
+    <header class="planet-header">
+        <a href="index.html" class="back-button">← Back to Solar System</a>
+        <h2>STAR SCOPE</h2>
+    </header>
+
+    <main class="planet-page">
+
+        <section class="planet-hero">
+            <div class="planet-visual">
+                <div class="planet-sphere" id="planetSphere"></div>
+            </div>
+
+            <div class="planet-content">
+                <p class="eyebrow">EXPLORE OUR COSMIC NEIGHBOURS</p>
+
+                <h1 id="planetName">Earth</h1>
+
+                <p class="planet-description" id="planetDescription">
+                    Discover the wonders of this planet.
+                </p>
+
+                <div class="planet-stats">
+                    <div class="stat-card">
+                        <span>Distance from Sun</span>
+                        <strong id="planetDistance">149.6 million km</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Diameter</span>
+                        <strong id="planetDiameter">12,742 km</strong>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Orbital Period</span>
+                        <strong id="planetPeriod">365.25 days</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="planet-about">
+            <p class="eyebrow">GET TO KNOW THE PLANET</p>
+            <h2>About <span id="aboutPlanetName">Earth</span></h2>
+            <p id="planetAbout">
+                Explore the planet, its atmosphere, surface and unique features.
+            </p>
+        </section>
+
+        <section class="planet-extra">
+            <div class="extra-card">
+                <h3>Atmosphere</h3>
+                <p id="planetAtmosphere">Loading...</p>
+            </div>
+
+            <div class="extra-card">
+                <h3>Moons</h3>
+                <p id="planetMoons">Loading...</p>
+            </div>
+
+            <div class="extra-card">
+                <h3>Fun Fact</h3>
+                <p id="planetFact">Loading...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/planet.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Radar | Star Scope</title>
+    <link rel="stylesheet" href="css/asteroid-radar.css">
+</head>
+<body>
+
+    <header class="radar-header">
+        <a href="index.html" class="logo">✧ STAR SCOPE</a>
+        <a href="index.html" class="back-btn">← Back to Dashboard</a>
+    </header>
+
+    <main class="radar-main">
+
+        <section class="radar-hero">
+            <p class="section-label">DEEP SPACE MONITORING</p>
+            <h1>☄️ Asteroid Radar</h1>
+            <p>
+                Track near-Earth asteroids, explore their orbital data
+                and monitor their closest approaches to our planet.
+            </p>
+        </section>
+
+        <section class="radar-stats">
+            <div class="stat-card">
+                <span>☄️</span>
+                <h3 id="totalAsteroids">--</h3>
+                <p>Asteroids Tracked</p>
+            </div>
+
+            <div class="stat-card">
+                <span>⚠️</span>
+                <h3 id="hazardousAsteroids">--</h3>
+                <p>Potentially Hazardous</p>
+            </div>
+
+            <div class="stat-card">
+                <span>🌍</span>
+                <h3 id="closestAsteroid">--</h3>
+                <p>Closest Approach</p>
+            </div>
+        </section>
+
+        <section class="asteroid-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">NEAR-EARTH OBJECTS</p>
+                    <h2>Asteroid Tracking</h2>
+                </div>
+                <span class="feed-status" id="feedStatus">● CONNECTING...</span>
+            </div>
+
+<div class="asteroid-controls">
+
+    <input
+        type="text"
+        id="asteroidSearch"
+        placeholder="🔍 Search asteroid by name..."
+    >
+
+    <select id="hazardFilter">
+        <option value="all">All Asteroids</option>
+        <option value="hazardous">Potentially Hazardous</option>
+        <option value="safe">Not Classified as Hazardous</option>
+    </select>
+
+    <select id="sortAsteroids">
+        <option value="distance">Sort by Closest Distance</option>
+        <option value="size">Sort by Size</option>
+        <option value="speed">Sort by Speed</option>
+    </select>
+
+</div>
+
+            <div id="asteroidList" class="asteroid-grid">
+                <div class="loading-state">
+                    <h3>Loading asteroid data...</h3>
+                    <p>Connecting to NASA's asteroid database.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        STAR SCOPE © 2026 · EXPLORE BEYOND LIMITS
+    </footer>
+
+    <script src="js/asteroid-radar.js"></script>
+
+</body>
+</html>

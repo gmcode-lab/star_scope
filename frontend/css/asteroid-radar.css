@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #080e1a;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.radar-header {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    background: #0c1524;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.back-btn {
+    color: #8bdfff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.radar-main {
+    width: 86%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 55px 0;
+}
+
+.radar-hero {
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #42c8ff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.radar-hero h1 {
+    font-size: clamp(30px, 5vw, 45px);
+    margin-bottom: 15px;
+}
+
+.radar-hero > p:last-child {
+    color: #9baec4;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.radar-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 55px;
+}
+
+.stat-card {
+    padding: 23px;
+    background: #111e30;
+    border: 1px solid rgba(100,180,255,0.15);
+    border-radius: 14px;
+}
+
+.stat-card span {
+    font-size: 23px;
+}
+
+.stat-card h3 {
+    font-size: 27px;
+    margin: 13px 0 6px;
+    color: #42c8ff;
+}
+
+.stat-card p {
+    color: #9baec4;
+    font-size: 12px;
+}
+
+.asteroid-section {
+    margin-top: 20px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    font-size: 23px;
+}
+
+.feed-status {
+    color: #f5c66b;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.asteroid-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.asteroid-card {
+    background: #111e30;
+    border: 1px solid rgba(100,180,255,0.15);
+    border-radius: 15px;
+    padding: 22px;
+    transition: 0.3s ease;
+}
+
+.asteroid-card:hover {
+    transform: translateY(-5px);
+    border-color: #42c8ff;
+    box-shadow: 0 10px 25px rgba(66,200,255,0.1);
+}
+
+.asteroid-card h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.asteroid-card p {
+    color: #aab9cc;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 7px;
+}
+
+.asteroid-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hazardous {
+    color: #ff8585;
+    background: rgba(255,70,70,0.12);
+}
+
+.safe {
+    color: #69e5ae;
+    background: rgba(60,220,150,0.12);
+}
+
+.loading-state,
+.error-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 55px 20px;
+    background: #111e30;
+    border: 1px solid rgba(100,180,255,0.15);
+    border-radius: 15px;
+    color: #aab9cc;
+}
+
+.loading-state h3,
+.error-state h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #66788f;
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 750px) {
+    .radar-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .asteroid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .radar-main {
+        width: 90%;
+    }
+
+    .radar-header {
+        padding: 0 5%;
+    }
+}
+
+/* INTERACTIVE ASTEROID LEARNING PANEL */
+
+.learn-asteroid {
+    margin-top: 18px;
+    border-top: 1px solid rgba(100,180,255,0.15);
+    padding-top: 14px;
+}
+
+.learn-asteroid summary {
+    color: #42c8ff;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.learn-asteroid summary::-webkit-details-marker {
+    display: none;
+}
+
+.learn-asteroid summary::after {
+    content: "+";
+    float: right;
+    font-size: 18px;
+}
+
+.learn-asteroid[open] summary::after {
+    content: "−";
+}
+
+.learning-content {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.learning-item {
+    padding: 13px;
+    border-radius: 9px;
+    background: rgba(66,200,255,0.06);
+    border: 1px solid rgba(66,200,255,0.10);
+}
+
+.learning-item h4 {
+    color: #8bdfff;
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.learning-item p {
+    color: #aab9cc;
+    font-size: 11px;
+    line-height: 1.7;
+}
